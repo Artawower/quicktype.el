@@ -1,4 +1,4 @@
-[[https://github.com/Artawower/quicktype.el/actions][https://github.com/artawower/quicktype.el/actions/workflows/lint.yml/badge.svg]]
+[[https://github.com/Artawower/quicktype.el/actions][https://github.com/artawower/quicktype.el/actions/workflows/checker.yml/badge.svg]]
 
 * Quicktype.el
 Package for quickly types converting from json to many languages. Wrapper over [[https://quicktype.io]].
