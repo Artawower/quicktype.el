@@ -1,0 +1,26 @@
+[[https://github.com/Artawower/quicktype.el/actions][https://github.com/artawower/quicktype.el/actions/workflows/lint.yml/badge.svg]]
+
+* Quicktype.el
+Package for quickly types converting from json to many languages. Wrapper over [[https://quicktype.io]].
+* Install
+/Quelpa/
+#+BEGIN_SRC emacs-lisp
+(use-package quicktype
+  :quelpa (quicktype :fetcher github :repo "artawower/quicktype.el")
+  :bind (("C-x j v" . quicktype-json-to-type)
+         ("C-x j p" . quicktype-paste-json-as-type)
+         ("C-x j q" . quicktype)))
+#+END_SRC
+/doom/
+  #+BEGIN_SRC emacs-lisp
+(package! quicktype :recipe (:host github :repo "artawower/quicktype.el"))
+  #+END_SRC
+
+  After install your should install quicktype. Your need to have npm.
+  Run =quicktype-install-depdendencies= or do it manually by [[https://github.com/quicktype/quicktype#installation][instruction]]
+* Functions
+=quicktype-json-to-type= - convert current json buffer to type
+=quicktype-paste-json-as-type= - paste json from clipboard as type
+=quicktype= - if the current mode is json-mode, the buffer will be converted to type, otherwise it will try to insert the clipboard as a type according to the current mode
+* Usage
+[[./images/sample.jpg]]
